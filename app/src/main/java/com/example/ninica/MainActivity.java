@@ -20,9 +20,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
 
-
-
-
     private Spinner spinner;
     private Button exportButton;
     private static final String[] projects = {"1408", "A128", "8268"};
