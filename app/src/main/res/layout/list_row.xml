@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/errorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="false"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="?attr/listPreferredItemPaddingLeft"
+            android:text="TextView"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/remove_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/errorCount"
+            android:minWidth="@android:dimen/app_icon_size"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/errorCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="false"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/add_button"
+            android:gravity="center"
+            android:minWidth="@android:dimen/app_icon_size"
+            android:text="TextView"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="?attr/listPreferredItemPaddingRight"
+            android:minWidth="@android:dimen/app_icon_size"
+            android:text="+" />
+    </RelativeLayout>
+
+</TableRow>
