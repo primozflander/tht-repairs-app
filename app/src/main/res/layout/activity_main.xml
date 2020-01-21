@@ -19,16 +19,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="?attr/listPreferredItemPaddingLeft"
             android:layout_marginBottom="?attr/listPreferredItemPaddingLeft"
-            android:text="Izberi projekt:"
-            android:textSize="30sp"
-
-            />
+            android:text="Izberi projekt"
+            android:textSize="30sp" />
 
         <Spinner
             android:id="@+id/spinner1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="?attr/listPreferredItemPaddingLeft" />
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nalog, število kosov..."
+            android:inputType="textPersonName"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -50,7 +58,7 @@
         <Button
             android:id="@+id/exportButton"
             android:layout_width="wrap_content"
-            android:layout_height="74dp"
+            android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="?attr/listPreferredItemPaddingRight"
             android:text="Izvozi seznam"
