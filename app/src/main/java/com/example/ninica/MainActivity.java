@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -18,11 +19,39 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-
-
     private Spinner spinner;
     private Button exportButton;
-    private static final String[] projects = {"1408", "A128", "8268"};
+    private static final String[] projects = {"...",
+            "A338",
+            "B338",
+            "E338",
+            "F338",
+            "G338",
+            "H338",
+            "I338",
+            "K338",
+            "L338",
+            "R338",
+            "X338",
+            "A339",
+            "D339",
+            "F339",
+            "H339",
+            "J339",
+            "L339",
+            "A381",
+            "A380",
+            "A1018",
+            "A0904",
+            "B0904",
+            "A614",
+            "B614",
+            "A609",
+            "Axel classic",
+            "Axel premium",
+            "Ročajna",
+            "Potenciometer F338",
+    };
     Intent intent ;
 
     @Override
@@ -49,11 +78,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
 
-                String recipient = "primoz.flander@gmail.com";
+                String recipient = "ziga.cuk@kolektor.com";
                 String message = "";
 
                 String projectName = spinner.getSelectedItem().toString();
-                message = message.concat("\n" + projectName);
+                EditText editText = (EditText) findViewById(R.id.editText);
+                message = message.concat("Projekt: " + projectName);
+                message = message.concat("\n\n Nalog in število kosov: " + editText.getText().toString());git status
                 message = message.concat("\n\n Seznam napak:");
                 ListAdapter listAdapter = lv.getAdapter();
 
@@ -96,15 +127,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private ArrayList getListData() {
 
-        String[] errors = {"Stik",
-                "Manjkajoca komponenta",
-                "Premalo vstavljena komponenta",
-                "Drugo",
-                "Manjkajoca zica",
-                "Narobe vstavljena komponenta",
-                "Poskodovana komponenta",
-                "Nepospajkana komponenta",
-                "Odvecna komponenta",
+        String[] errors = {"Manjka SMD komponenta",
+                "Manjka THT komponenta",
+                "Manjka uC",
+                "Nepospajkana SMD komponenta",
+                "Nepospajkana SMD komponenta (SOT23)",
+                "Slabo pospajkan faston konektor",
+                "Slabo pospajkana THT komponenta",
+                "Slabo pospajkani shunti",
+                "Slabo vstavljena THT komponenta",
+                "Stik med SMD diodo in THT komponento",
+                "Stik uC",
+                "Spajka na faston konektorju",
+                "Slabo zalit modul s PU maso - vidne komponente",
+                "Slabo zalit modul s PU maso - mehurčkasta masa",
+                "Poškodovan priključni kabel",
         };
 
 
